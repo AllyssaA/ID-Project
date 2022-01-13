@@ -6,8 +6,19 @@
   padding: 0;
 }
 
+@font-face {
+  font-family: "Muro";
+  src: url(../fonts/Muro.otf);
+}
+
+@font-face {
+  font-family: "Scaffold-SemiBold";
+  src: url(../fonts/Scaffold-SemiBold.otf);
+}
+
 body {
   margin: 0;
+  font-family: "Muro";
 }
 
 /*---------- Homepage ---------- */
@@ -44,15 +55,17 @@ picture img {
 /* -------Lemming test slider page------- */
 /* https://www.youtube.com/watch?v=9HcxHDS2w1s&ab_channel=WebDevSimplified */
 .carousel {
+  background-image: url("../images/Achtergrond_homepage\(test\)_Tekengebied\ 1.svg");
   width: 100vw;
   height: 100vh;
   position: absolute;
+  
 }
 
-.carousel > ul{
-    padding: 0;
-    margin: 0;
-    list-style: none;
+.carousel > ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
 .slide {
@@ -60,7 +73,7 @@ picture img {
   inset: 0;
   opacity: 0;
   transition: 200ms opacity ease-in-out;
-  transition-delay: 200ms ;
+  transition-delay: 200ms;
 }
 
 .slide > img {
@@ -74,7 +87,7 @@ picture img {
 .slide[data-active] {
   opacity: 1;
   z-index: 1;
-  transition-delay: 0ms ;
+  transition-delay: 0ms;
 }
 
 .carousel-button {
@@ -87,25 +100,25 @@ picture img {
   transform: translateY(-50%);
   color: rgba(75, 71, 71, 0.9);
   cursor: pointer;
-  border-radius: .25rem;
+  border-radius: 0.25rem;
   padding: 0 0.5rem;
-  background-color: rgba(0, 0, 0, .1);
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .carousel-button:hover,
-.carousel-button:focus{
-    color: white;
-    background-color: rgba(0, 0, 0, .2);
+.carousel-button:focus {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
-.carousel-button:focus{
-    outline: 1px solid black;
+.carousel-button:focus {
+  outline: 1px solid black;
 }
 
-.carousel-button.prev{
-    left: 1rem;
+.carousel-button.prev {
+  left: 1rem;
 }
 
-.carousel-button.next{
-    right: 1rem;
+.carousel-button.next {
+  right: 1rem;
 }
