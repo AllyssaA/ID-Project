@@ -7,18 +7,33 @@
   padding: 0;
 }
 
-body img:first-of-type{
+picture img{
     width: 100%;
-    display: flex;
+    position: absolute;
 }
 
 .choose-animal{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     width: 100%;
-    
+    top: 50vh;
+    position: absolute;
+    overflow: hidden;
+    }
+
+.choose-animal img{
+    width: 100%;
+    flex-wrap: wrap;
 }
 
-.choose-animal img:nth-child(1) {
+.choose-animal a{
+    /* transform: scale(2);  */
+    transition: all 0.3s ease; 
+}
 
+.choose-animal a:hover{
+    cursor: pointer;
+    transform: scale(2.5); 
+    transition: all 0.3s ease;
+    overflow: hidden;
 }
