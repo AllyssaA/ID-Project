@@ -1,1 +1,24 @@
 /* CSS doc */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body img:first-of-type{
+    width: 100%;
+    display: flex;
+}
+
+.choose-animal{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    
+}
+
+.choose-animal img:nth-child(1) {
+
+}
