@@ -11,35 +11,34 @@ body {
 }
 
 /*---------- Homepage ---------- */
-picture img {
+.background img{
   width: 100%;
   position: absolute;
+  z-index: -1;
 }
 
-.choose-animal {
+ul.container-animals{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 5em;
   width: 100%;
-  top: 50vh;
+  top: 60vh;
   position: absolute;
-  overflow: hidden;
-}
 
-.choose-animal img {
-  width: 100%;
+  list-style-type: none;
   flex-wrap: wrap;
 }
 
-.choose-animal a {
+.container-animals li.animal{
   transition: all 2s ease;
 }
 
-.choose-animal a:hover {
+.container-animals li.animal:hover{
   cursor: pointer;
-  transform: scale(2.5);
+  transform: scale(1.2);
   transition: all 2s ease;
 }
+
 
 /* -------Lemming test slider page------- */
 /* https://www.youtube.com/watch?v=9HcxHDS2w1s&ab_channel=WebDevSimplified */
@@ -109,3 +108,19 @@ picture img {
 .carousel-button.next{
     right: 1rem;
 }
+
+
+/* ------- Lemming page test ------- */
+
+body .test {
+  overscroll-behavior: none;
+  height: 100vh;
+}
+.container {
+  overscroll-behavior: none;
+  width: 600%;
+  height: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
