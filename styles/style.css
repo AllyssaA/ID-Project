@@ -41,6 +41,18 @@ ul.container-animals {
   transition: all 2s ease;
 }
 
+.container-animals li.animal img:nth-child(2){
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+
+.container-animals li.animal:hover img:nth-child(2){
+  display: flex;
+}
+
 /* -------Lemming test slider page------- */
 /* https://www.youtube.com/watch?v=9HcxHDS2w1s&ab_channel=WebDevSimplified */
 /* .carousel {
