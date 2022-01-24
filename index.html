@@ -5,20 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="scripts/homescreen.js" defer></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link href="styles/style.css" rel="stylesheet" />
     <title>Klimaatuitdaging</title>
   </head>
-  <body>
+  <body class="home-screen">
     <section id="intro-video">
-      <video width="100%" height="80%" autoplay preload muted id="toendra-video" >
-        <source src="images/Toendra_Intro_Animatie_V05_compressed.mp4" type="video/mp4" />
-        
+      <video
+        width="100%"
+        height="80%"
+        autoplay
+        preload
+        controls
+        muted
+        id="toendra-video"
+      >
+        <source
+          src="images/Toendra_Intro_Animatie_V05_compressed.mp4"
+          type="video/mp4"
+        />
+
         Your browser does not support the video tag.
       </video>
-    <button class="skip-btn">Skip</button>
-    <button class="mute-btn">mute</button>
+      <button class="skip-btn">Skip &#62;</button>
+      <button class="mute-btn"><i class="fas fa-volume-mute"></i></button>
+
     </section>
-    
+
     <section class="home-title">
       <picture class="background">
         <img src="images/Homescreen_Background.svg" alt="Achtergrond toendra" />
