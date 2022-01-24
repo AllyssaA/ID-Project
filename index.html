@@ -4,49 +4,64 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="scripts/script.js" defer></script>
+    <script src="scripts/homescreen.js" defer></script>
     <link href="styles/style.css" rel="stylesheet" />
     <title>Klimaatuitdaging</title>
   </head>
   <body>
-    <!-- <video width="100%" height="" autoplay preload muted>
-      <source src="images/Toendra_Intro_Animatie_V04.mp4"
-            type="video/mp4">
-            Your browser does not support the video tag.
-    </video> -->
+    <section id="intro-video">
+      <video width="100%" height="80%" autoplay preload muted id="toendra-video" >
+        <source src="images/Toendra_Intro_Animatie_V05_compressed.mp4" type="video/mp4" />
+        
+        Your browser does not support the video tag.
+      </video>
+    <button class="skip-btn">Skip</button>
+    <button class="mute-btn">mute</button>
+    </section>
+    
+    <section class="home-title">
+      <picture class="background">
+        <img src="images/Homescreen_Background.svg" alt="Achtergrond toendra" />
+        <img
+          src="images/nieuwekleuren/Homescreen_Hoofdtitel_+pijl_V2.svg"
+          alt="Titel Het kwetsbare leven op de toendra"
+        />
+      </picture>
 
-    <picture class="background">
-      <img src="images/Homescreen_Background.svg" alt="Achtergrond toendra" />
-      <img
-        src="images/nieuwekleuren/Homescreen_Hoofdtitel_+pijl_V2.svg"
-        alt="Titel Het kwetsbare leven op de toendra"
-      />
-    </picture>
+      <ul class="container-animals">
+        <li class="animal">
+          <a href="pages/lemming.html">
+            <img src="images/Homescreen_Lemming.svg" alt="Lemming" />
+            <img
+              src="images/nieuwekleuren/Homescreen_Lemming_new_color.svg"
+              alt="Lemming hover"
+            />
+          </a>
+        </li>
 
-    <ul class="container-animals">
-      <li class="animal">
-        <a href="pages/lemming.html">
-          <img src="images/Homescreen_Lemming.svg" alt="Lemming" />
-          <img src="images/nieuwekleuren/Homescreen_Lemming_new_color.svg" alt="Lemming hover" />  
-        </a>
-      </li>
+        <li class="animal">
+          <a href="pages/sneeuwluipaard.html">
+            <img
+              src="images/Homescreen_Sneeuwluipaard.svg"
+              alt="Sneeuwluipaard"
+            />
+            <img
+              src="images/nieuwekleuren/Homescreen_Sneeuwluipaard_new_color.svg"
+              alt="Sneeuwluipaard hover"
+            />
+          </a>
+        </li>
 
-      <li class="animal">
-        <a href="pages/sneeuwluipaard.html">
-          <img
-            src="images/Homescreen_Sneeuwluipaard.svg"
-            alt="Sneeuwluipaard"
-          />
-          <img src="images/nieuwekleuren/Homescreen_Sneeuwluipaard_new_color.svg" alt="Sneeuwluipaard hover">
-        </a>
-      </li>
-
-      <li class="animal">
-        <a href="pages/poolvos.html">
-          <img src="images/Homescreen_Poolvos.svg" alt="Poolvos" />
-          <img src="images/nieuwekleuren/Homescreen_Poolvos_new_colour.svg" alt="Poolvos hover">
-        </a>
-      </li>
-    </ul>
+        <li class="animal">
+          <a href="pages/poolvos.html">
+            <img src="images/Homescreen_Poolvos.svg" alt="Poolvos" />
+            <img
+              src="images/nieuwekleuren/Homescreen_Poolvos_new_colour.svg"
+              alt="Poolvos hover"
+            />
+          </a>
+        </li>
+      </ul>
+    </section>
   </body>
 </html>
