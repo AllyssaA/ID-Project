@@ -19,6 +19,11 @@ body {
   /* overflow: hidden; */
 }
 
+#intro-video {
+  opacity: 1;
+  transition: opacity 1s ease;
+}
+
 .home-screen {
   overflow: hidden;
 }
@@ -88,8 +93,8 @@ section.home-title {
   padding: 0.3em;
 }
 
-.mute-btn:hover{
-  background-color: #82B5ED;
+.mute-btn:hover {
+  background-color: #82b5ed;
   border-radius: 2px;
   padding: 0.3em;
 }
@@ -99,16 +104,11 @@ section.home-title {
 .container {
   max-width: 100vw;
   max-height: 100vh;
-  /* scroll-snap-type: y mandatory; */
 }
 
 .animation {
   display: flex;
   flex-direction: column;
-  /* height: 100%; */
-  /* display: flex; */
-
-  /* scroll-snap-align: start; */
 }
 
 .animation > h1 {
@@ -143,9 +143,45 @@ https://dev.to/jslim/fading-up-sections-using-intersection-observer-3fhj
 }
 
 .in-view {
-  /* transform: none; */
   opacity: 1;
-  /* position: absolute;
-  top:0;
-  bottom:0; */
+}
+
+.popup {
+  margin-top: 6000px;
+}
+
+/* --- Pop up links --- */
+.popup {
+  /* background-color: #00000095; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 101vh;
+  padding: 0;
+  margin: 0;
+  margin-top: 6925px;
+  position: relative;
+  opacity: 0;
+}
+
+.popup picture, .popup img {
+  width: 50vw;
+}
+
+.popup picture img:nth-child(2) {
+  width: 5rem;
+  /* background-color: black; */
+}
+
+.cta {
+  display: flex;
+  gap: 2rem;
+  position: absolute;
+  left: 32rem;
+  bottom: 18rem;
+}
+
+.cta img {
+  max-width: 17rem;
 }
