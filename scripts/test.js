@@ -33,6 +33,6 @@ ScrollLottie({
 ScrollLottie({
   target: ".afterafter",
   path: "https://assets4.lottiefiles.com/packages/lf20_98vq8oa0.json",
-  duration: 10,
+  duration: 5,
   speed: "medium"
 })

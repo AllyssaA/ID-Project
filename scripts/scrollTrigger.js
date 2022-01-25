@@ -1,40 +1,9 @@
 // Javascript doc
-// const buttons = document.querySelectorAll("[data-carousel-button]");
-
-// buttons.forEach((button) => {
-//   button.addEventListener("click", () => {
-//     const offset = button.dataset.carouselButton === "next" ? 1 : -1;
-//     const slides = button
-//       .closest("[data-carousel]")
-//       .querySelector("[data-slides]");
-
-//     const activeSlide = slides.querySelector("[data-active]")
-//     let newIndex = [...slides.children].indexOf(activeSlide) + offset;
-//     if(newIndex < 0) newIndex = slides.children.length - 1;
-//     if(newIndex >= slides.children.length) newIndex = 0;
-
-//     slides.children[newIndex].dataset.active = true
-//     delete activeSlide.dataset.active
-//   });
-// });
-
-// gsap.registerPlugin(ScrollTrigger);
-
-// let divs = gsap.utils.toArray(".animation");
-
-// gsap.to(divs, {
-//   xPercent: -100 * (divs.length - 1),
-//   ease: "none",
-//   scrollTrigger: {
-//     trigger: ".container",
-//     pin: true,
-//     scrub: 1,
-//     snap: 1 / (divs.length - 1),
-//     // base vertical scrolling on how wide the container is so it feels more natural.
-//     start: "50% 50%",
-//     end: "+=200",
-//   }
-// });
+/* Intersection observer
+https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API
+Dit jaar: https://www.youtube.com/watch?v=2IbRtjez6ag&t=1s
+css guy: https://www.youtube.com/watch?v=T8EYosX4NOo
+*/
 const observerOptions = {
   root: null,
   threshold: 0,
@@ -42,35 +11,19 @@ const observerOptions = {
 };
 
 const observer = new IntersectionObserver(entries => {
-  console.log(entries);
-  // console.group('intersection')
-  // entries.forEach(entry => {
-  //   if (entry.intersectionRatio ===1 ) {
-  //     console.log(entry.target.classList, 'entered')
-  //   } else if (!entry.isIntersecting){
-  //     console.log(entry.target.classList, 'left the chat')
-  //   } else if (entry.intersectionRatio > 0.5) {
-  //     console.log(entry.target.classList, 'is leaving')
-  //   } else if (entry.intersectionRatio < 0.5) {
-  //     console.log(entry.target.classList, 'is entering')
-  //   }
-  // })
-  // console.groupEnd('intersection')
+  // console.log(entries);
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      console.log(entry.target.classList, 'is Intersecting')
+      // console.log(entry.target.classList, 'is Intersecting')
       entry.target.classList.add('in-view')
       // observer.unobserve(entry.target)
     // } else if (!entry.isIntersecting) {
     } else if (entry.intersectionRatio < 0.5) {
-      console.log(entry.target.classList, 'Exit screen')
+      // console.log(entry.target.classList, 'Exit screen')
       entry.target.classList.remove('in-view')
     }
   })
 }, observerOptions)
-// const animations = document.querySelectorAll('.animation')
-
-// animations.forEach(ani => observer.observe(ani))
 
 window.addEventListener('DOMContentLoaded', (event) => {
   const sections = Array.from(document.getElementsByClassName('animation'));
@@ -78,26 +31,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
     observer.observe(section)
   }
 })
-// observer.observe(document.querySelector('.animation'))
-
-// let an = document.querySelectorAll('.animation')
-// console.log(an)
-// let observer = new IntersectionObserver(
-//   (entries, observer) => {
-//     entries.forEach(entry => {
-//       if (entry.intersectionRatio !=1) {
-        
-//       } else {
-        
-//       }
-//     });
-//   },
-//   {rootMargin: "0px 0px -200px 0px"}
-// )
 
 gsap.registerPlugin(ScrollTrigger);
 const container = document.querySelectorAll('.container')
-console.log(container)
 
 ScrollLottie({
   target: ".past",
@@ -142,3 +78,38 @@ ScrollLottie({
   duration: 5,
   speed: "slow",
 });
+
+// Poolvos
+ScrollLottie({
+  target: ".pv-past",
+  path: "https://assets6.lottiefiles.com/packages/lf20_jczbeg3x.json",
+  duration: 5,
+  speed: "slow",
+});
+
+ScrollLottie({
+  target: ".pv-present",
+  path: "https://assets1.lottiefiles.com/packages/lf20_ftt8jvgt.json",
+  duration: 5,
+  speed: "slow",
+});
+
+ScrollLottie({
+  target: ".pv-future",
+  path: "https://assets5.lottiefiles.com/packages/lf20_kkvjx6j0.json",
+  duration: 5,
+  speed: "slow",
+});
+
+window.addEventListener('scroll', () => {
+  // enable this to see the scroll Y value
+// console.log(window.scrollY)
+  let cta = document.querySelector('.popup')
+  if(window.scrollY >=7200) {
+    cta.style.opacity = 1;
+  } else {
+    cta.style.opacity = 0;
+  }
+})
+
+ 
