@@ -105,7 +105,7 @@ window.addEventListener('scroll', () => {
   // enable this to see the scroll Y value
 // console.log(window.scrollY)
   let cta = document.querySelector('.popup')
-  if(window.scrollY >=7200) {
+  if(window.scrollY >=7500) {
     cta.style.opacity = 1;
   } else {
     cta.style.opacity = 0;
