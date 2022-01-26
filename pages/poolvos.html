@@ -4,10 +4,23 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link href="../styles/style.css" rel="stylesheet" />
     <title>Poolvos | Klimaatuitdaging</title>
   </head>
   <body>
+    <section>
+      <audio id="play-sound" src="../sounds/Toendra_Geluiden_Homescreen-Pooltoendra.mp3" loop>
+        <p>
+          If you are reading this, it is because your browser does not support
+          the audio element.
+        </p>
+      </audio>
+      <button class="mute-audio">
+        <i id="bt-mute-btn" class="fas fa-volume-mute"></i>
+      </button>
+    </section>
+
     <section class="container">
       <div class="pv-past animation fadeup">
         <h1>25 jaar geleden</h1>
@@ -25,20 +38,27 @@
     <section class="popup">
       <picture>
         <img
-          src="../images/SVG_EINDSCHERM/SVG/poolvos_popup_main.svg"
-          alt="Help de lemming"
+          src="../images/SVG_Eindscherm_Final2.0/Poolvos_popup_Tekengebied_2.0.svg"
+          alt="Help de Poolvos"
         />
       </picture>
       <div class="cta">
-        <a href="" target="blank"
+        <a href="../images/ig/Eindscherm_Poolvos_Tekengebied.svg" target="_blank"
           ><img
-            src="../images/SVG_EINDSCHERM/SVG/poolvos_donate.svg"
-            alt="Doneer of adopteer een lemming"
+            src="../images/SVG_Eindscherm_Final2.0/Poolvos_Deelverhaal.svg"
+            alt="Deel link"
         /></a>
-        <a href="../images/SVG_EINDSCHERM/SVG/poolvos_ig.svg" target="blank"
+      </div>
+      <div class="homepage-info">
+        <a href="http://www.wwf.nl" target="_blank"
           ><img
-            src="../images/SVG_EINDSCHERM/SVG/poolvos_share.svg" 
-            alt="Deel met vrienden"
+            src="../images/SVG_Eindscherm_Final2.0/Poolvos_WWF_Tekengebied_2.0.svg"
+            alt="WWF link"
+        /></a>
+        <a href="../index.html"
+          ><img
+            src="../images/SVG_Eindscherm_Final2.0/Poolvos_Homepage_Tekengebied_2.0.svg"
+            alt="Homepage link"
         /></a>
       </div>
     </section>

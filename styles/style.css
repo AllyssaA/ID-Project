@@ -160,7 +160,7 @@ https://dev.to/jslim/fading-up-sections-using-intersection-observer-3fhj
   height: 101vh;
   padding: 0;
   margin: 0;
-  margin-top: 6925px;
+  margin-top: 6950px;
   position: relative;
   opacity: 0;
 }
@@ -176,12 +176,46 @@ https://dev.to/jslim/fading-up-sections-using-intersection-observer-3fhj
 
 .cta {
   display: flex;
+  /* flex-direction: column; */
   gap: 2rem;
   position: absolute;
-  left: 32rem;
-  bottom: 18rem;
+  /* left: 32rem; */
+  bottom: 21rem;
 }
 
 .cta img {
+  max-width: 36rem;
+}
+
+.homepage-info{
+  display: flex;
+  position: absolute;
+  gap: 1rem;
+  bottom: 16rem;
+}
+
+.homepage-info img{
   max-width: 17rem;
+}
+
+/* -- background sounds */
+
+.mute-audio{
+  position: fixed;
+  z-index: 5;
+  border: none;
+  background: none;
+  font-size: 2em;
+  padding: 0.1em;
+  cursor: pointer;
+}
+
+.mute-audio:hover{
+  background-color: #8b98a7;
+  border-radius: 2px;
+  padding: 0.1em;
+}
+
+.background-audio{
+  display: none;
 }
