@@ -112,4 +112,22 @@ window.addEventListener('scroll', () => {
   }
 })
 
- 
+// bostoendra sounds
+const audio = document.getElementById("play-sound");
+const btMute = document.getElementById("bt-mute-btn");
+const play = document.querySelector(".mute-audio");
+
+
+function togglePlay() {
+  if (audio.paused || audio.ended) {
+    audio.play();
+    btMute.classList.remove('fa-volume-muted')
+    btMute.classList.add('fa-volume-up')
+  } else {
+    audio.pause();
+    btMute.classList.remove('fa-volume-up')
+    btMute.classList.add('fa-volume-muted')
+  }
+}
+
+play.addEventListener("click", togglePlay);
