@@ -7,9 +7,10 @@ This repository is for a group project part of Information Design from HVA CMD. 
 
 
 This project has been developed with the following languages:
-HTML
-CSS
-JS
+
+* HTML
+* CSS
+* JS
 
 In combination with libraries such as:
 
